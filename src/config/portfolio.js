@@ -24,8 +24,8 @@ export const config = {
   // Social Media Links
   social: {
     linkedin: 'https://www.linkedin.com/in/irusha-dilshan-a15645354',
-    facebook: 'https://facebook.com/irusha.dilshan.vidanapathirana', // From GitHub README
-    instagram: 'https://instagram.com/iru__sha', // From GitHub README
+    facebook: 'https://www.facebook.com/share/1JkmVSQXw1/?mibextid=wwXIfrVidanapathirana',
+    instagram: 'https://instagram.com/iru__sha',
     youtube: 'https://youtube.com/c/vehiclesaleinsrilanka1631', // From GitHub README
     github: 'https://github.com/IrushaDilshan'
   },

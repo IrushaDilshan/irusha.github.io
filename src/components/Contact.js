@@ -74,6 +74,22 @@ const Contact = () => {
       action: 'Connect'
     },
     {
+      icon: '📘',
+      title: 'Facebook',
+      value: 'Follow me',
+      link: config.social.facebook,
+      gradient: 'linear-gradient(135deg, #1877f2 0%, #42a5f5 100%)',
+      action: 'Follow'
+    },
+    {
+      icon: '📷',
+      title: 'Instagram',
+      value: '@iru__sha',
+      link: config.social.instagram,
+      gradient: 'linear-gradient(135deg, #e1306c 0%, #f77737 50%, #fcaf45 100%)',
+      action: 'Follow'
+    },
+    {
       icon: '💻',
       title: 'GitHub',
       value: `@${config.github.username}`,
