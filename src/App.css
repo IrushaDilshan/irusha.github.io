@@ -1,0 +1,1 @@
+﻿.App { text-align: left; } html { scroll-behavior: smooth; } html, body, #root { height: 100%; } * { margin: 0; padding: 0; box-sizing: border-box; } .App { min-height: 100vh; position: relative; }
