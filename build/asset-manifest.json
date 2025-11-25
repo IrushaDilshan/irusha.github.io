@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/irusha.github.io/static/css/main.b672f769.css",
+    "main.js": "/irusha.github.io/static/js/main.7e91daa0.js",
+    "static/js/453.6c884635.chunk.js": "/irusha.github.io/static/js/453.6c884635.chunk.js",
+    "index.html": "/irusha.github.io/index.html",
+    "main.b672f769.css.map": "/irusha.github.io/static/css/main.b672f769.css.map",
+    "main.7e91daa0.js.map": "/irusha.github.io/static/js/main.7e91daa0.js.map",
+    "453.6c884635.chunk.js.map": "/irusha.github.io/static/js/453.6c884635.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b672f769.css",
+    "static/js/main.7e91daa0.js"
+  ]
+}
