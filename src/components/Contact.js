@@ -101,20 +101,20 @@ const Contact = () => {
 
   return (
     <section id="contact" style={{
-      padding: '6rem 0',
+      padding: 'clamp(3rem, 8vw, 6rem) 0',
       background: 'linear-gradient(135deg, #1a1a2e 0%, #0f1419 100%)',
       position: 'relative'
     }}>
       <div className="floating-blob blob-4"></div>
       
       <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+        <div style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 6vw, 4rem)' }}>
           <div style={{
-            fontSize: '1rem',
+            fontSize: 'clamp(0.875rem, 2.5vw, 1rem)',
             fontWeight: 700,
             textTransform: 'uppercase',
-            letterSpacing: '3px',
-            marginBottom: '1.5rem',
+            letterSpacing: 'clamp(1px, 0.5vw, 3px)',
+            marginBottom: 'clamp(1rem, 3vw, 1.5rem)',
             background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
@@ -127,16 +127,16 @@ const Contact = () => {
               bottom: '-8px',
               left: '50%',
               transform: 'translateX(-50%)',
-              width: '60px',
-              height: '3px',
+              width: 'clamp(40px, 10vw, 60px)',
+              height: 'clamp(2px, 0.5vw, 3px)',
               background: 'linear-gradient(90deg, #4facfe, #00f2fe)',
               borderRadius: '2px'
             }}></div>
           </div>
           <h2 style={{
-            fontSize: '3rem',
+            fontSize: 'clamp(2rem, 6vw, 3rem)',
             fontWeight: 800,
-            marginBottom: '1.5rem',
+            marginBottom: 'clamp(1rem, 3vw, 1.5rem)',
             background: 'linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%)',
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
@@ -146,12 +146,13 @@ const Contact = () => {
             Let's Collaborate
           </h2>
           <p style={{
-            fontSize: '1.25rem',
+            fontSize: 'clamp(1rem, 3vw, 1.25rem)',
             color: 'rgba(255, 255, 255, 0.8)',
             maxWidth: '700px',
             margin: '0 auto',
             lineHeight: 1.6,
-            fontWeight: 400
+            fontWeight: 400,
+            padding: '0 1rem'
           }}>
             Let's collaborate and bring your ideas to life
           </p>
@@ -159,10 +160,11 @@ const Contact = () => {
         
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '2rem',
-          marginTop: '4rem',
-          marginBottom: '4rem'
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100vw - 2rem), 1fr))',
+          gap: 'clamp(1rem, 3vw, 2rem)',
+          marginTop: 'clamp(2rem, 6vw, 4rem)',
+          marginBottom: 'clamp(2rem, 6vw, 4rem)',
+          padding: '0 clamp(0.5rem, 2vw, 0)'
         }}>
           {contactMethods.map((method, index) => (
             <div
@@ -171,32 +173,32 @@ const Contact = () => {
               onMouseEnter={() => setHoveredContact(index)}
               onMouseLeave={() => setHoveredContact(null)}
               style={{
-                padding: '2.5rem',
+                padding: 'clamp(1.5rem, 4vw, 2.5rem)',
                 textAlign: 'center',
                 position: 'relative',
                 overflow: 'hidden',
                 transition: 'all 0.4s ease',
-                transform: hoveredContact === index ? 'translateY(-8px) scale(1.02)' : 'translateY(0)',
-                border: `1px solid ${hoveredContact === index ? 'rgba(79, 172, 254, 0.3)' : 'rgba(255, 255, 255, 0.1)'}` 
+                transform: hoveredContact === index ? `translateY(-${window.innerWidth <= 768 ? '4px' : '8px'}) scale(${window.innerWidth <= 768 ? '1.01' : '1.02'})` : 'translateY(0)',
+                border: `1px solid ${hoveredContact === index ? 'rgba(79, 172, 254, 0.3)' : 'rgba(255, 255, 255, 0.1)'}`
               }}
             >
               <div style={{
-                width: '80px',
-                height: '80px',
+                width: 'clamp(60px, 12vw, 80px)',
+                height: 'clamp(60px, 12vw, 80px)',
                 background: method.gradient,
                 borderRadius: '50%',
-                margin: '0 auto 1.5rem',
+                margin: '0 auto clamp(1rem, 3vw, 1.5rem)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '2rem',
+                fontSize: 'clamp(1.5rem, 4vw, 2rem)',
                 position: 'relative',
-                transform: hoveredContact === index ? 'scale(1.1) rotate(10deg)' : 'scale(1)',
+                transform: hoveredContact === index ? `scale(${window.innerWidth <= 768 ? '1.05' : '1.1'}) rotate(${window.innerWidth <= 768 ? '5deg' : '10deg'})` : 'scale(1)',
                 transition: 'transform 0.3s ease'
               }}>
                 <div style={{
                   position: 'absolute',
-                  inset: '3px',
+                  inset: 'clamp(2px, 0.5vw, 3px)',
                   background: '#0a0a0f',
                   borderRadius: '50%',
                   display: 'flex',
@@ -208,9 +210,9 @@ const Contact = () => {
               </div>
 
               <h3 style={{
-                fontSize: '1.25rem',
+                fontSize: 'clamp(1.125rem, 3vw, 1.25rem)',
                 fontWeight: 700,
-                marginBottom: '0.5rem',
+                marginBottom: 'clamp(0.25rem, 1vw, 0.5rem)',
                 background: method.gradient,
                 WebkitBackgroundClip: 'text',
                 backgroundClip: 'text',
@@ -220,9 +222,9 @@ const Contact = () => {
               </h3>
 
               <p style={{
-                fontSize: '1rem',
+                fontSize: 'clamp(0.875rem, 2.5vw, 1rem)',
                 color: 'rgba(255, 255, 255, 0.8)',
-                marginBottom: '1.5rem',
+                marginBottom: 'clamp(1rem, 3vw, 1.5rem)',
                 fontWeight: 500
               }}>
                 {method.value}
@@ -235,16 +237,21 @@ const Contact = () => {
                 style={{
                   background: method.gradient,
                   border: 'none',
-                  padding: '0.75rem 1.5rem',
-                  borderRadius: '25px',
+                  padding: 'clamp(0.625rem, 2vw, 0.75rem) clamp(1.25rem, 3vw, 1.5rem)',
+                  borderRadius: 'clamp(20px, 4vw, 25px)',
                   color: '#000000',
-                  fontSize: '0.9rem',
+                  fontSize: 'clamp(0.8rem, 2vw, 0.9rem)',
                   fontWeight: 600,
                   cursor: 'pointer',
                   transition: 'all 0.3s ease',
-                  transform: hoveredContact === index ? 'scale(1.05)' : 'scale(1)',
+                  transform: hoveredContact === index ? `scale(${window.innerWidth <= 768 ? '1.02' : '1.05'})` : 'scale(1)',
                   textDecoration: 'none',
-                  display: 'inline-block'
+                  display: 'inline-block',
+                  minHeight: '44px',
+                  minWidth: '120px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
                 }}
               >
                 {method.action}
@@ -255,16 +262,18 @@ const Contact = () => {
 
         {/* Contact Form */}
         <div className="glass-card" style={{
-          padding: '3rem',
-          marginTop: '4rem',
+          padding: 'clamp(1.5rem, 5vw, 3rem)',
+          marginTop: 'clamp(2rem, 6vw, 4rem)',
           maxWidth: '800px',
-          margin: '4rem auto 0'
+          margin: 'clamp(2rem, 6vw, 4rem) auto 0',
+          marginLeft: 'auto',
+          marginRight: 'auto'
         }}>
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 5vw, 3rem)' }}>
             <h3 style={{
-              fontSize: '2.5rem',
+              fontSize: 'clamp(1.75rem, 5vw, 2.5rem)',
               fontWeight: 700,
-              marginBottom: '1rem',
+              marginBottom: 'clamp(0.75rem, 2vw, 1rem)',
               background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
@@ -273,28 +282,29 @@ const Contact = () => {
               Send Me a Message
             </h3>
             <p style={{
-              fontSize: '1.125rem',
+              fontSize: 'clamp(1rem, 2.5vw, 1.125rem)',
               color: 'rgba(255, 255, 255, 0.8)',
               maxWidth: '500px',
-              margin: '0 auto'
+              margin: '0 auto',
+              padding: '0 1rem'
             }}>
               Have a project in mind? Let's discuss how we can work together!
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(1rem, 3vw, 1.5rem)' }}>
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-              gap: '1.5rem'
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))',
+              gap: 'clamp(1rem, 3vw, 1.5rem)'
             }}>
               <div>
                 <label style={{
                   display: 'block',
-                  marginBottom: '0.5rem',
+                  marginBottom: 'clamp(0.375rem, 1vw, 0.5rem)',
                   color: 'rgba(255, 255, 255, 0.9)',
                   fontWeight: 600,
-                  fontSize: '0.95rem'
+                  fontSize: 'clamp(0.875rem, 2vw, 0.95rem)'
                 }}>
                   Your Name *
                 </label>
@@ -306,14 +316,16 @@ const Contact = () => {
                   required
                   style={{
                     width: '100%',
-                    padding: '1rem',
-                    borderRadius: '10px',
+                    padding: 'clamp(0.875rem, 2.5vw, 1rem)',
+                    borderRadius: 'clamp(8px, 2vw, 10px)',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
                     background: 'rgba(255, 255, 255, 0.05)',
                     color: '#fff',
-                    fontSize: '1rem',
+                    fontSize: 'clamp(0.875rem, 2vw, 1rem)',
                     transition: 'all 0.3s ease',
-                    outline: 'none'
+                    outline: 'none',
+                    minHeight: '44px',
+                    boxSizing: 'border-box'
                   }}
                   onFocus={(e) => e.target.style.border = '1px solid rgba(79, 172, 254, 0.5)'}
                   onBlur={(e) => e.target.style.border = '1px solid rgba(255, 255, 255, 0.2)'}
@@ -324,10 +336,10 @@ const Contact = () => {
               <div>
                 <label style={{
                   display: 'block',
-                  marginBottom: '0.5rem',
+                  marginBottom: 'clamp(0.375rem, 1vw, 0.5rem)',
                   color: 'rgba(255, 255, 255, 0.9)',
                   fontWeight: 600,
-                  fontSize: '0.95rem'
+                  fontSize: 'clamp(0.875rem, 2vw, 0.95rem)'
                 }}>
                   Email Address *
                 </label>

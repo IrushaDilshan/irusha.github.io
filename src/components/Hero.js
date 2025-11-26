@@ -58,12 +58,13 @@ const Hero = () => {
       }}></div>
       
       <div className="container">
-        <div style={{
+        <div className="hero-grid" style={{
           display: 'grid',
-          gridTemplateColumns: typeof window !== 'undefined' && window.innerWidth > 768 ? '1.2fr 0.8fr' : '1fr',
-          gap: '4rem',
+          gridTemplateColumns: window.innerWidth > 768 ? '1.2fr 0.8fr' : '1fr',
+          gap: 'clamp(2rem, 6vw, 4rem)',
           alignItems: 'center',
-          minHeight: '80vh'
+          minHeight: '80vh',
+          padding: 'clamp(1rem, 3vw, 2rem) 0'
         }}>
           {/* Left Column - Main Content */}
           <div style={{
@@ -96,37 +97,41 @@ const Hero = () => {
 
             {/* Main Heading */}
             <div style={{
-              fontSize: '1.5rem',
+              fontSize: 'clamp(1.25rem, 3vw, 1.5rem)',
               fontWeight: 500,
-              marginBottom: '1rem',
-              color: 'rgba(255, 255, 255, 0.7)'
+              marginBottom: 'clamp(0.5rem, 2vw, 1rem)',
+              color: 'rgba(255, 255, 255, 0.7)',
+              textAlign: 'center'
             }}>
               Hello, I'm
             </div>
             
             <h1 style={{
-              fontSize: 'clamp(3rem, 8vw, 5rem)',
+              fontSize: 'clamp(2.5rem, 8vw, 5rem)',
               fontWeight: 900,
               lineHeight: 1.1,
-              marginBottom: '1rem',
+              marginBottom: 'clamp(0.75rem, 2vw, 1rem)',
               background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 40%, #06b6d4 100%)',
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              letterSpacing: '-0.02em'
+              letterSpacing: '-0.02em',
+              textAlign: 'center'
             }}>
               Irusha Dilshan
             </h1>
 
             {/* Role & Expertise */}
             <div style={{
-              fontSize: '1.5rem',
+              fontSize: 'clamp(1.25rem, 4vw, 1.5rem)',
               fontWeight: 600,
-              marginBottom: '1.5rem',
+              marginBottom: 'clamp(1rem, 3vw, 1.5rem)',
               background: 'linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%)',
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
+              WebkitTextFillColor: 'transparent',
+              textAlign: 'center',
+              lineHeight: 1.3
             }}>
               Full-Stack Developer & Mobile App Specialist
             </div>
@@ -134,9 +139,10 @@ const Hero = () => {
             {/* Specialization Pills */}
             <div style={{
               display: 'flex',
-              gap: '0.75rem',
-              marginBottom: '2rem',
-              flexWrap: 'wrap'
+              gap: 'clamp(0.5rem, 2vw, 0.75rem)',
+              marginBottom: 'clamp(1.5rem, 4vw, 2rem)',
+              flexWrap: 'wrap',
+              justifyContent: 'center'
             }}>
               {[
                 { icon: '⚛️', text: 'React.js' },
@@ -148,12 +154,12 @@ const Hero = () => {
                   display: 'flex',
                   alignItems: 'center',
                   gap: '0.5rem',
-                  padding: '0.5rem 1rem',
+                  padding: 'clamp(0.4rem, 1.5vw, 0.5rem) clamp(0.75rem, 2vw, 1rem)',
                   background: 'rgba(255, 255, 255, 0.05)',
                   backdropFilter: 'blur(15px)',
                   border: '1px solid rgba(255, 255, 255, 0.1)',
                   borderRadius: '50px',
-                  fontSize: '0.875rem',
+                  fontSize: 'clamp(0.75rem, 2vw, 0.875rem)',
                   fontWeight: '500',
                   opacity: isLoaded ? 1 : 0,
                   transform: isLoaded ? 'translateY(0)' : 'translateY(20px)',
@@ -167,11 +173,11 @@ const Hero = () => {
 
             {/* Enhanced Description Card */}
             <div className="glass-card" style={{
-              padding: '2rem',
-              marginBottom: '2.5rem',
+              padding: 'clamp(1.5rem, 4vw, 2rem)',
+              marginBottom: 'clamp(2rem, 5vw, 2.5rem)',
               background: 'rgba(255, 255, 255, 0.03)',
               border: '1px solid rgba(255, 255, 255, 0.08)',
-              borderRadius: '20px',
+              borderRadius: 'clamp(12px, 3vw, 20px)',
               position: 'relative',
               overflow: 'hidden'
             }}>
@@ -185,18 +191,19 @@ const Hero = () => {
               }}></div>
               
               <p style={{
-                fontSize: '1.125rem',
+                fontSize: 'clamp(1rem, 2.5vw, 1.125rem)',
                 color: 'rgba(255, 255, 255, 0.9)',
                 lineHeight: 1.7,
-                marginBottom: '1.5rem'
+                marginBottom: 'clamp(1rem, 3vw, 1.5rem)',
+                textAlign: 'center'
               }}>
                 🚀 Building <strong style={{color: '#06b6d4'}}>ServSync</strong> - A cutting-edge service management platform that revolutionizes business operations
               </p>
               
               <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                gap: '1rem',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+                gap: 'clamp(0.75rem, 2vw, 1rem)',
                 marginBottom: '1.5rem'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
