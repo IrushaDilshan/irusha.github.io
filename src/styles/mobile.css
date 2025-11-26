@@ -1,0 +1,87 @@
+/* Mobile-Specific Improvements */
+@media (max-width: 768px) {
+  /* Better touch targets */
+  button, a[role="button"], .clickable {
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
+  }
+  
+  /* Prevent zoom on input focus */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  textarea,
+  select {
+    font-size: 16px !important;
+    -webkit-appearance: none;
+    transform: none;
+    zoom: 1;
+  }
+  
+  /* Hero section mobile adjustments */
+  .hero-grid {
+    text-align: center !important;
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Contact cards mobile spacing */
+  .glass-card {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  /* Better mobile scrolling */
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Mobile typography adjustments */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    word-break: break-word;
+  }
+  
+  p {
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small mobile devices */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Reduce motion for performance */
+  .floating-blob {
+    animation-duration: 8s;
+  }
+  
+  /* Smaller tap targets on very small screens */
+  button, a[role="button"] {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-grid {
+    min-height: 60vh;
+  }
+  
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .glass-card {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+}
